@@ -1,0 +1,229 @@
+.hero {
+  position: relative;
+  padding-block: clamp(48px, 8vw, 92px) clamp(56px, 9vw, 104px);
+  overflow: hidden;
+}
+
+/* soft warm glow behind the headline */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: -140px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--teal) 16%, transparent) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -220px;
+  right: -160px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--clay) 14%, transparent) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: clamp(28px, 5vw, 60px);
+  align-items: center;
+}
+
+.hero__hi {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--clay);
+  margin-bottom: 2px;
+  transform: rotate(-1.5deg);
+}
+
+.hero__star {
+  color: var(--honey);
+}
+
+.hero__name {
+  position: relative;
+  font-size: clamp(3.1rem, 10vw, 5.6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin-bottom: 26px;
+}
+
+.hero__squiggle {
+  position: absolute;
+  left: 2px;
+  bottom: -20px;
+  color: var(--teal);
+  opacity: 0.7;
+  max-width: 78%;
+}
+
+.hero__role {
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.hero__tagline {
+  font-size: 1.5rem;
+  color: var(--teal);
+  margin-bottom: 18px;
+  transform: rotate(-0.8deg);
+}
+
+.hero__intro {
+  max-width: 52ch;
+  margin-bottom: 30px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- the pinned note ---------- */
+
+.hero__card {
+  position: relative;
+  padding: 30px 26px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px 18px 22px 19px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(1.6deg);
+  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.hero__card:hover {
+  transform: rotate(-0.6deg) translateY(-4px);
+}
+
+/* washi tape at the top corners */
+.hero__tape {
+  position: absolute;
+  top: -13px;
+  width: 78px;
+  height: 26px;
+  background: color-mix(in srgb, var(--honey) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--honey) 70%, transparent);
+  opacity: 0.85;
+}
+
+.hero__tape--l {
+  left: -18px;
+  transform: rotate(-24deg);
+}
+
+.hero__tape--r {
+  right: -18px;
+  transform: rotate(20deg);
+  background: color-mix(in srgb, var(--teal) 32%, transparent);
+  border-color: color-mix(in srgb, var(--teal) 45%, transparent);
+}
+
+.hero__card-title {
+  font-size: 1.6rem;
+  color: var(--clay);
+  margin: 0 0 14px;
+  transform: rotate(-1.2deg);
+}
+
+.hero__facts {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hero__facts li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.hero__facts strong {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-faint);
+  margin-bottom: 1px;
+}
+
+.hero__facts span:not(.hero__dot) {
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.hero__dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.hero__dot--clay {
+  background: var(--clay);
+}
+
+.hero__dot--honey {
+  background: var(--honey);
+}
+
+.hero__card-foot {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1.5px dashed var(--line-strong);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.hero__arrow {
+  position: absolute;
+  left: 52%;
+  bottom: -14px;
+  color: var(--clay);
+  opacity: 0.4;
+  transform: rotate(6deg);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__card {
+    transform: rotate(-0.8deg);
+    max-width: 480px;
+  }
+
+  .hero__arrow {
+    display: none;
+  }
+}

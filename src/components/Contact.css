@@ -1,0 +1,102 @@
+.ct__card {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 54px) clamp(24px, 5vw, 56px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 28px 24px 30px 26px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  overflow: hidden;
+}
+
+.ct__card::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1.5px dashed color-mix(in srgb, var(--teal) 32%, transparent);
+  border-radius: 22px 19px 24px 20px;
+  pointer-events: none;
+}
+
+.ct__star {
+  position: absolute;
+  color: var(--honey);
+  pointer-events: none;
+}
+
+.ct__star--1 {
+  top: 26px;
+  right: 34px;
+  transform: rotate(12deg);
+}
+
+.ct__star--2 {
+  bottom: 40px;
+  left: 32px;
+  color: var(--clay);
+  opacity: 0.6;
+  transform: rotate(-14deg);
+}
+
+.ct__title {
+  position: relative;
+  font-size: clamp(2.1rem, 5.6vw, 3.3rem);
+  line-height: 1.08;
+  /* room for the squiggle that hangs below "together" */
+  margin-bottom: 30px;
+}
+
+.ct__underline {
+  position: relative;
+  display: inline-block;
+  color: var(--teal);
+}
+
+.ct__underline svg {
+  position: absolute;
+  left: 4px;
+  bottom: -16px;
+  max-width: 96%;
+  color: var(--clay);
+  opacity: 0.65;
+}
+
+.ct__text {
+  max-width: 50ch;
+  margin-inline: auto;
+  margin-bottom: 30px;
+  font-size: 1.04rem;
+}
+
+.ct__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.ct__ps {
+  margin: 0;
+  font-size: 1.22rem;
+  color: var(--ink-faint);
+  transform: rotate(-0.8deg);
+}
+
+@media (max-width: 560px) {
+  .ct__star--1 {
+    top: 18px;
+    right: 18px;
+  }
+
+  .ct__star--2 {
+    display: none;
+  }
+
+  .ct__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,28 @@
+.ft {
+  border-top: 1px solid var(--line);
+  padding-block: 30px;
+}
+
+.ft__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ft__meta {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--ink-faint);
+}
+
+.ft__meta a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.ft__meta a:hover {
+  color: var(--teal-deep);
+  text-decoration: underline;
+}
