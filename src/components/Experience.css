@@ -125,7 +125,7 @@
   width: 7px;
   height: 7px;
   border-radius: 2px;
-  background: var(--honey);
+  background: var(--green);
   transform: rotate(45deg);
 }
 

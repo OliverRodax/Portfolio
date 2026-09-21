@@ -28,6 +28,9 @@
   --clay-wash: #f8e3d8;
   --honey: #f2c94c;
   --honey-wash: #fbeec4;
+  /* Same value as the teal so it reads as a sibling, not a fourth accent. */
+  --green: #3f7d3a;
+  --green-wash: #e0ecdd;
 
   /* shape */
   --r-sm: 8px;
