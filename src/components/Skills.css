@@ -1,40 +1,5 @@
 .sk__head {
-  margin-bottom: 20px;
-}
-
-.sk__legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 28px;
-  font-size: 0.83rem;
-  color: var(--ink-faint);
-}
-
-.sk__key {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.sk__key::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  transform: rotate(45deg);
-}
-
-.sk__key--hands::before {
-  background: var(--teal);
-}
-
-.sk__key--comf::before {
-  background: var(--honey);
-}
-
-.sk__key--learn::before {
-  background: var(--line-strong);
+  margin-bottom: 30px;
 }
 
 /* Four groups, so a 2x2 block reads better than an auto-fit row
@@ -97,7 +62,6 @@
 .sk__items li {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: 10px;
   padding-bottom: 8px;
   border-bottom: 1px dashed var(--line);
@@ -124,25 +88,5 @@
   height: 8px;
   border-radius: 2px;
   transform: rotate(45deg);
-  background: var(--line-strong);
-}
-
-.sk--handson .sk__name::before {
-  background: var(--teal);
-}
-
-.sk--comfortable .sk__name::before {
-  background: var(--honey);
-}
-
-.sk__level {
-  flex: none;
-  font-size: 0.76rem;
-  letter-spacing: 0.03em;
-  color: var(--ink-faint);
-}
-
-.sk--handson .sk__level {
-  color: var(--teal-deep);
-  font-weight: 500;
+  background: var(--green);
 }

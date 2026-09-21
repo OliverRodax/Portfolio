@@ -3,12 +3,6 @@ import { Doodle } from "./Doodles";
 import Reveal from "./Reveal";
 import "./Skills.css";
 
-const LEVEL_LABEL = {
-  "hands-on": "hands-on",
-  comfortable: "comfortable",
-  learning: "learning",
-};
-
 export default function Skills() {
   return (
     <section className="section" id="skills">
@@ -17,17 +11,10 @@ export default function Skills() {
           <p className="eyebrow">what I know</p>
           <h2 className="section-title">Skills</h2>
           <p className="section-intro">
-            Every item says how far I actually got with it. Learning means I
-            have built something with it and still keep the documentation open
-            while I work.
+            The languages, tools and hardware I have worked with so far, from
+            school and from my own projects.
           </p>
         </Reveal>
-
-        <div className="sk__legend" aria-hidden="true">
-          <span className="sk__key sk__key--hands">hands-on</span>
-          <span className="sk__key sk__key--comf">comfortable</span>
-          <span className="sk__key sk__key--learn">learning</span>
-        </div>
 
         <div className="sk__grid">
           {skills.map((group, i) => (
@@ -41,9 +28,8 @@ export default function Skills() {
 
               <ul className="sk__items">
                 {group.items.map((item) => (
-                  <li key={item.name} className={`sk--${item.level.replace(/\s/g, "")}`}>
-                    <span className="sk__name">{item.name}</span>
-                    <span className="sk__level">{LEVEL_LABEL[item.level]}</span>
+                  <li key={item}>
+                    <span className="sk__name">{item}</span>
                   </li>
                 ))}
               </ul>

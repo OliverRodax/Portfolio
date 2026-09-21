@@ -26,8 +26,8 @@ A few notes on that file:
   full card, but with a "Private repository" marker instead of a GitHub link.
 - `smallStuff` is the drawer underneath — school exercises, experiments and
   abandoned things. Each entry takes an optional one-line `note`.
-- Skill `level` is one of `"hands-on"`, `"comfortable"` or `"learning"`. These map
-  to the legend above the skill cards. They're deliberately honest — keep them that way.
+- `skills` groups are plain lists of strings, with no ranking attached. Add or
+  remove entries as you pick things up.
 
 ## What's deliberately *not* on this site
 

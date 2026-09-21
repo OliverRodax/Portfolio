@@ -236,53 +236,40 @@ export const smallStuff = [
   },
 ];
 
-// Levels are deliberately honest — they match my CV, not my ego.
+// Plain lists, no ranking. Add or remove strings as you pick things up.
 export const skills = [
   {
     group: "Languages",
     doodle: "code",
-    items: [
-      { name: "Python", level: "comfortable" },
-      { name: "C#", level: "comfortable" },
-      { name: "C", level: "comfortable" },
-      { name: "C++", level: "learning" },
-      { name: "JavaScript", level: "learning" },
-      { name: "TypeScript", level: "learning" },
-    ],
+    items: ["Python", "C#", "C", "C++", "JavaScript", "TypeScript"],
   },
   {
     group: "Electronics & Embedded",
     doodle: "chip",
     items: [
-      { name: "Microcontroller programming", level: "hands-on" },
-      { name: "PlatformIO / ESP32", level: "hands-on" },
-      { name: "Arduino", level: "hands-on" },
-      { name: "Circuit design & assembly", level: "hands-on" },
-      { name: "KiCad PCB design", level: "learning" },
-      { name: "Zephyr RTOS", level: "learning" },
+      "Microcontroller programming",
+      "PlatformIO / ESP32",
+      "Arduino",
+      "Circuit design & assembly",
+      "KiCad PCB design",
+      "Zephyr RTOS",
     ],
   },
   {
     group: "Web",
     doodle: "globe",
-    items: [
-      { name: "React", level: "learning" },
-      { name: "Next.js", level: "learning" },
-      { name: "Node.js", level: "learning" },
-      { name: "Prisma", level: "learning" },
-      { name: "SQLite", level: "learning" },
-    ],
+    items: ["React", "Next.js", "Node.js", "Prisma", "SQLite"],
   },
   {
     group: "Tools & Systems",
     doodle: "wrench",
     items: [
-      { name: "Linux", level: "comfortable" },
-      { name: "Windows", level: "comfortable" },
-      { name: "Docker", level: "learning" },
-      { name: "Git", level: "learning" },
-      { name: "Caddy", level: "learning" },
-      { name: "Excel + Power Query", level: "comfortable" },
+      "Linux",
+      "Windows",
+      "Docker",
+      "Git",
+      "Caddy",
+      "Excel + Power Query",
     ],
   },
 ];
