@@ -1,5 +1,6 @@
 import { profile } from "../data/content";
 import { mailtoHref } from "../lib/contact";
+import Impressum from "./Impressum";
 import "./Footer.css";
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
           <a href={profile.github} target="_blank" rel="noreferrer noopener">
             GitHub
           </a>{" "}
-          · <a href={mailtoHref()}>Email</a>
+          · <a href={mailtoHref()}>Email</a> · <Impressum />
         </p>
       </div>
     </footer>

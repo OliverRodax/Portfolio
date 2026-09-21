@@ -279,6 +279,19 @@ export const languages = [
   { name: "English", level: "Fluent, spoken and written" },
 ];
 
+// Offenlegung nach § 25 Mediengesetz. A private, non-commercial site only
+// needs the media owner's name and address; the contact address and purpose
+// are included because they are good practice and cost nothing.
+export const impressum = {
+  owner: "Oliver Rodax",
+  street: "Auf der Wiese 7",
+  city: "2824 Schiltern",
+  country: "Österreich",
+  purpose:
+    "Private, nicht-kommerzielle Website zur Darstellung eigener Projekte und als Bewerbungsunterlage.",
+  contentResponsibility: "Oliver Rodax",
+};
+
 export const nav = [
   { id: "about", label: "About" },
   { id: "work", label: "Experience" },
