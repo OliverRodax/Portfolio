@@ -36,7 +36,7 @@ export const profile = {
     "I study electronics and technical informatics at HTL Mödling. Outside of school I build embedded things: smartwatch firmware, my own PCBs, a small handheld console on an ESP32, and the home automation that runs our house.",
   blurb: [
     "I started with Arduino and never really stopped. Since then I have moved from wiring up modules to writing firmware in C, and lately to designing my own boards in KiCad. School covers the theory. The rest happens at my desk at home.",
-    "I have done three internships. At Hamburger GmbH I was taken on for IT support and spent the month writing an OPC DA client in Python that reads live data off the plant machinery. At IAGNG Gas Analytics I worked on commissioning and built a C# tool for managing a National Instruments cRIO controller.",
+    "I have done three internships. Two of them were at Hamburger GmbH. The first one was mostly IT support, and the second one I spent writing an OPC DA client in Python that reads live data off the plant machinery. At IAGNG Gas Analytics I worked on commissioning and built a C# tool for managing a National Instruments cRIO controller.",
     "Right now most of my time goes into Project Alpine, my second smartwatch, with a PCB I designed myself and Zephyr firmware on an nRF54L15. The rest goes into RDX Home, the Home Assistant setup that runs our house without depending on anyone's cloud.",
   ],
 };
