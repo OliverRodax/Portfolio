@@ -112,7 +112,7 @@ export default function Impressum() {
             </svg>
           </button>
 
-          <p className="eyebrow">rechtliches</p>
+          <p className="section-label">Rechtliches</p>
           <h2 id="impressum-title" className="imp__title">
             Impressum
           </h2>

@@ -1,98 +1,37 @@
 .hero {
-  position: relative;
-  padding-block: clamp(48px, 8vw, 92px) clamp(56px, 9vw, 104px);
-  overflow: hidden;
-}
-
-/* soft warm glow behind the headline */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -180px;
-  left: -140px;
-  width: 620px;
-  height: 620px;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--teal) 16%, transparent) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
-  z-index: -1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: -220px;
-  right: -160px;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--clay) 14%, transparent) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
-  z-index: -1;
+  padding-block: clamp(52px, 9vw, 104px) clamp(48px, 7vw, 80px);
 }
 
 .hero__inner {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
-  gap: clamp(28px, 5vw, 60px);
-  align-items: center;
-}
-
-.hero__hi {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-family: var(--font-hand);
-  font-size: 1.5rem;
-  color: var(--clay);
-  margin-bottom: 2px;
-  transform: rotate(-1.5deg);
-}
-
-.hero__star {
-  color: var(--honey);
+  max-width: 900px;
 }
 
 .hero__name {
-  position: relative;
-  font-size: clamp(3.1rem, 10vw, 5.6rem);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-  margin-bottom: 26px;
-}
-
-.hero__squiggle {
-  position: absolute;
-  left: 2px;
-  bottom: -20px;
-  color: var(--teal);
-  opacity: 0.7;
-  max-width: 78%;
+  font-size: clamp(2.8rem, 8vw, 4.6rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  margin-bottom: 20px;
+  /* The rule under the name is the one piece of ornament the page keeps. */
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .hero__role {
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-  color: var(--ink);
-  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
-.hero__tagline {
-  font-size: 1.5rem;
-  color: var(--teal);
-  margin-bottom: 18px;
-  transform: rotate(-0.8deg);
+.hero__place {
+  margin-bottom: 26px;
 }
 
 .hero__intro {
-  max-width: 52ch;
+  max-width: 60ch;
+  font-size: var(--fs-md);
   margin-bottom: 30px;
 }
 
@@ -102,128 +41,57 @@
   gap: 12px;
 }
 
-/* ---------- the pinned note ---------- */
+/* ---------- currently ---------- */
 
-.hero__card {
-  position: relative;
-  padding: 30px 26px 24px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px 18px 22px 19px;
-  box-shadow: var(--shadow-md);
-  transform: rotate(1.6deg);
-  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+.hero__now {
+  margin-top: clamp(44px, 6vw, 68px);
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
-.hero__card:hover {
-  transform: rotate(-0.6deg) translateY(-4px);
-}
-
-/* washi tape at the top corners */
-.hero__tape {
-  position: absolute;
-  top: -13px;
-  width: 78px;
-  height: 26px;
-  background: color-mix(in srgb, var(--honey) 55%, transparent);
-  border: 1px solid color-mix(in srgb, var(--honey) 70%, transparent);
-  opacity: 0.85;
-}
-
-.hero__tape--l {
-  left: -18px;
-  transform: rotate(-24deg);
-}
-
-.hero__tape--r {
-  right: -18px;
-  transform: rotate(20deg);
-  background: color-mix(in srgb, var(--teal) 32%, transparent);
-  border-color: color-mix(in srgb, var(--teal) 45%, transparent);
-}
-
-.hero__card-title {
-  font-size: 1.6rem;
-  color: var(--clay);
-  margin: 0 0 14px;
-  transform: rotate(-1.2deg);
-}
-
-.hero__facts {
-  list-style: none;
+.hero__now-grid {
   display: grid;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.hero__facts li {
-  display: flex;
-  gap: 11px;
-  align-items: flex-start;
-}
-
-.hero__facts strong {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--ink-faint);
-  margin-bottom: 1px;
-}
-
-.hero__facts span:not(.hero__dot) {
-  font-size: 0.96rem;
-  line-height: 1.45;
-  color: var(--ink);
-}
-
-.hero__dot {
-  flex: none;
-  width: 9px;
-  height: 9px;
-  margin-top: 8px;
-  border-radius: 50%;
-  background: var(--teal);
-}
-
-.hero__dot--clay {
-  background: var(--clay);
-}
-
-.hero__dot--honey {
-  background: var(--honey);
-}
-
-.hero__card-foot {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 32px;
   margin: 0;
+}
+
+.hero__now-grid dt {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.hero__now-grid dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--text);
+  max-width: 30ch;
+}
+
+.hero__stats {
+  margin: 26px 0 0;
   padding-top: 16px;
-  border-top: 1.5px dashed var(--line-strong);
-  font-size: 0.85rem;
-  color: var(--ink-faint);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-xs);
+  color: var(--text-subtle);
 }
 
-.hero__arrow {
-  position: absolute;
-  left: 52%;
-  bottom: -14px;
-  color: var(--clay);
-  opacity: 0.4;
-  transform: rotate(6deg);
-  pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .hero__inner {
+@media (max-width: 720px) {
+  .hero__now-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .hero__card {
-    transform: rotate(-0.8deg);
-    max-width: 480px;
+  .hero__now-grid dd {
+    max-width: none;
   }
 
-  .hero__arrow {
-    display: none;
+  .hero__actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
   }
 }

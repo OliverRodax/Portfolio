@@ -240,12 +240,12 @@ export const smallStuff = [
 export const skills = [
   {
     group: "Languages",
-    doodle: "code",
+    icon: "code",
     items: ["Python", "C#", "C", "C++", "JavaScript", "TypeScript"],
   },
   {
     group: "Electronics & Embedded",
-    doodle: "chip",
+    icon: "chip",
     items: [
       "Microcontroller programming",
       "PlatformIO / ESP32",
@@ -257,12 +257,12 @@ export const skills = [
   },
   {
     group: "Web",
-    doodle: "globe",
+    icon: "globe",
     items: ["React", "Next.js", "Node.js", "Prisma", "SQLite"],
   },
   {
     group: "Tools & Systems",
-    doodle: "wrench",
+    icon: "wrench",
     items: [
       "Linux",
       "Windows",

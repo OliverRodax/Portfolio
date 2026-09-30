@@ -6,9 +6,9 @@ export default function Experience() {
   return (
     <section className="section" id="work">
       <div className="wrap">
-        <Reveal className="xp__head">
-          <p className="eyebrow">internships</p>
-          <h2 className="section-title">Experience</h2>
+        <Reveal className="section-head">
+          <p className="section-label">Experience</p>
+          <h2 className="section-title">Internships</h2>
           <p className="section-intro">
             Three one-month internships so far. Two at Hamburger GmbH in Pitten
             and one at IAGNG Gas Analytics in Weikersdorf. The second time at
@@ -19,17 +19,13 @@ export default function Experience() {
 
         <ol className="xp__list">
           {experience.map((job, i) => (
-            <Reveal as="li" className="xp__item" key={job.year + job.org} delay={i * 90}>
-              <div className="xp__marker" aria-hidden="true">
-                <span className="xp__bead" />
+            <Reveal as="li" className="xp__item" key={job.year + job.org} delay={i * 70}>
+              <div className="xp__aside">
+                <span className="xp__year">{job.year}</span>
+                <span className="xp__duration">{job.duration}</span>
               </div>
 
               <div className="xp__body">
-                <div className="xp__meta">
-                  <span className="xp__year">{job.year}</span>
-                  <span className="xp__duration">{job.duration}</span>
-                </div>
-
                 <h3 className="xp__role">{job.role}</h3>
                 <p className="xp__org">
                   {job.org} <span aria-hidden="true">·</span> {job.place}
@@ -53,10 +49,8 @@ export default function Experience() {
           ))}
         </ol>
 
-        <Reveal className="edu" delay={120}>
-          <h3 className="edu__title">
-            <span className="hand">and school</span>
-          </h3>
+        <Reveal className="edu" delay={100}>
+          <h3 className="edu__title section-label">Education</h3>
 
           <ul className="edu__list">
             {education.map((e) => (

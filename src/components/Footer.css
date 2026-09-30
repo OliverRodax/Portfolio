@@ -1,6 +1,6 @@
 .ft {
-  border-top: 1px solid var(--line);
-  padding-block: 30px;
+  border-top: 1px solid var(--border);
+  padding-block: 28px;
 }
 
 .ft__inner {
@@ -13,16 +13,16 @@
 
 .ft__meta {
   margin: 0;
-  font-size: 0.87rem;
-  color: var(--ink-faint);
+  font-size: var(--fs-xs);
+  color: var(--text-subtle);
 }
 
 .ft__meta a {
-  color: var(--ink-soft);
+  color: var(--text-muted);
   text-decoration: none;
 }
 
 .ft__meta a:hover {
-  color: var(--teal-deep);
+  color: var(--accent);
   text-decoration: underline;
 }
