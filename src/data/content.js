@@ -58,11 +58,11 @@ export const experience = [
   {
     year: "2025",
     duration: "1-month internship",
-    role: "IT Support, in practice software development",
+    role: "IT Support & Software Development",
     org: "Hamburger GmbH",
     place: "Pitten",
     points: [
-      "Taken on for IT support and spent the month writing software instead",
+      "Started in IT support and moved into software development for the rest of the internship",
       "Wrote an OPC DA client in Python that reads live process data off the plant machinery",
       "Programmed and tested the application myself, start to finish",
     ],

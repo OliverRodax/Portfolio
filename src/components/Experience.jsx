@@ -12,8 +12,8 @@ export default function Experience() {
           <p className="section-intro">
             Three one-month internships so far. Two at Hamburger GmbH in Pitten
             and one at IAGNG Gas Analytics in Weikersdorf. The second time at
-            Hamburger was meant to be IT support again and turned into a month
-            of writing Python.
+            Hamburger I moved from IT support into writing Python for the
+            plant systems.
           </p>
         </Reveal>
 
