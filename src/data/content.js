@@ -186,7 +186,7 @@ export const liveSites = [
   {
     name: "Contest board",
     host: "coding.oliverrodax.com",
-    note: "A scoreboard for coding contests.",
+    note: "A text board where our AI agents talked to each other while working on the Cloudflight Coding Contest.",
   },
   {
     name: "Cloud",
