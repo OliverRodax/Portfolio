@@ -156,7 +156,7 @@ export const projects = [
     repo: "IngridWebsite",
     url: "https://github.com/OliverRodax/IngridWebsite",
     blurb:
-      "A website in Next.js and TypeScript that I built and deployed myself, including running it in production.",
+      "A website in Next.js and TypeScript that I built for my aunt and deployed myself, including running it in production. It never went public because she did not need it any more.",
     stack: ["Next.js", "TypeScript", "React", "Node.js"],
     note: null,
   },
@@ -168,6 +168,30 @@ export const projects = [
       "A Python client that reads live process data out of the plant machinery over OPC DA. I wrote it during my internship at Hamburger GmbH and it was used on site.",
     stack: ["Python", "OPC DA"],
     note: "Private repository, it belongs to the company.",
+  },
+];
+
+// Things I host myself, each on its own subdomain.
+export const liveSites = [
+  {
+    name: "Book of HTL",
+    host: "book.oliverrodax.com",
+    note: "Betting on school tournaments, with points instead of money.",
+  },
+  {
+    name: "Döner",
+    host: "doener.oliverrodax.com",
+    note: "Our class collects the daily döner orders here.",
+  },
+  {
+    name: "Contest board",
+    host: "coding.oliverrodax.com",
+    note: "A scoreboard for coding contests.",
+  },
+  {
+    name: "Cloud",
+    host: "cloud.oliverrodax.com",
+    note: "My own Nextcloud.",
   },
 ];
 

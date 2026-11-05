@@ -1,4 +1,4 @@
-import { projects, smallStuff, profile } from "../data/content";
+import { projects, smallStuff, liveSites, profile } from "../data/content";
 import { GithubIcon, LockIcon, ExternalIcon } from "./Icons";
 import Reveal from "./Reveal";
 import "./Projects.css";
@@ -69,7 +69,25 @@ export default function Projects() {
         </div>
 
         <Reveal className="pj__small">
-          <h3 className="pj__small-title section-label">Smaller things</h3>
+          <h3 className="pj__small-title section-label">Running live</h3>
+
+          <ul className="pj__small-list">
+            {liveSites.map((s) => (
+              <li key={s.host}>
+                <a
+                  href={`https://${s.host}`}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="pj__small-name">{s.name}</span>
+                  <em className="pj__small-lang">{s.host}</em>
+                </a>
+                <p className="pj__small-note">{s.note}</p>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="pj__small-title section-label pj__small-gap">Smaller things</h3>
 
           <ul className="pj__small-list">
             {smallStuff.map((s) => (

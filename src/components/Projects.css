@@ -151,3 +151,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+.pj__small-gap {
+  margin-top: 40px;
+}
